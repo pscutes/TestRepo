@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestSettings name="Divya" id="27e360da-1f7f-4316-9b67-1590e365a219" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Description>These are default test settings for a local test run.</Description>
+  <Deployment>
+    <DeploymentItem filename="..\UntiTest\" />
+  </Deployment>
+  <RemoteController name="Proj1" />
+  <Execution location="Remote" hostProcessPlatform="MSIL">
+    <TestTypeSpecific>
+      <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+        <AssemblyResolution applicationBaseDirectory="%USERPROFILE%\source\repos\Proj1\UntiTest">
+          <TestDirectory useLoadContext="true" />
+          <RuntimeResolution>
+            <Directory path="%USERPROFILE%\source\repos\Proj1\UntiTest" includeSubDirectories="true" />
+          </RuntimeResolution>
+        </AssemblyResolution>
+      </UnitTestRunConfig>
+    </TestTypeSpecific>
+    <AgentRule name="Web Server">
+      <SelectionCriteria>
+        <AgentProperty name="RAM &gt; 16GB" value="True" />
+      </SelectionCriteria>
+    </AgentRule>
+  </Execution>
+  <Properties />
+</TestSettings>
